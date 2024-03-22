@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        * {
+            text-decoration-line: none;
+        }
+
+        .about-harsh-and-albatross {
+            background-color: rgb(233, 230, 230);
+            padding: 44px 0;
+        }
+
+        .responsive-text {
+            text-align: center;
+        }
+
+        .heading {
+            font-size: xx-large;
+            font-weight: bold;
+        }
+
+        .paragraph {
+            font-size: small;
+            margin-top: 10px;
+        }
+
+        .image-who-we-are {
+            padding: 44px 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .image-container {
+            flex-basis: 40%;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .text-container {
+            flex-basis: 50%;
+            padding: 50px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .about-albatross {
+            padding: 30px 100px;
+        }
+        @media screen and (max-width :768px) {
+            .lastpage {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">{{t.t_name}}</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <u l class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    {% for i in c %}
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'blog' %}">{{i.c_name}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'explore' %}">{{i.c1_name}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="{% url 'destinationtour' %}">{{i.c2_name}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'about' %}">{{i.c3_name}}</a>
+                    </li>
+                    {% endfor %}
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><i
+                                class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </li>
+                    </ul>
+                    </li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="about-harsh-and-albatross">
+        <div class="responsive-text">
+            <h1 class="heading">ABOUT Harsh & Albatross Travel</h1>
+            <p class="paragraph"><a href="{% url 'indexpage' %}">Home</a>› ABOUT Harsh & Albatross Travel</p>
+        </div>
+    </section>
+    <section class="image-who-we-are">
+        {% for i in aw %}
+        <div class="container">
+            <div class="image-container">
+                <img src="{{i.img.url}}" alt="Image Description">
+                <p class="paragraph">All posts written by harsh › <a href="{% url 'blog' %}">blog</a></p>
+
+            </div>
+            <div class="text-container">
+                <strong style="font-size: xx-large;">{{i.a}}</strong>
+                <p>{{i.des | safe}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+    <section class="about-albatross">
+        {% for i in aw %}
+        <div class="responsive-text">
+            <h1 class="heading">{{i.b}}</h1>
+            <p class="paragraph">{{i.des1 | safe}}</p>
+        </div>
+        {% endfor %}
+    </section>
+    <section class="ninthsection" style="background-color: black;height: 90vh;color: #fff;padding: 40px;">
+        <div class="lastpage" style="display: flex;justify-content: space-between;flex-wrap: wrap;">
+            <div class="inner-lastpage">
+                {% for i in lapa %}
+                <h3 style="margin: 40px 0;">{{i.L1_name}}</h3>
+                {% endfor %}
+                {% for i in lapaCon %}
+                <h5><a href="" class="popular-content">{{i.l1_name}}</a></h5>
+                {% endfor %}
+            </div>
+            <div class="inner-lastpage">
+                {% for i in lapa %}
+                <h3 style="margin: 40px 0;">{{i.L2_name}}</h3>
+                {% endfor %}
+                {% for i in lapaCon %}
+                <h5><a href="" class="popular-content">{{i.l2_name}}</a></h5>
+                {% endfor %}
+            </div>
+            <div class="inner-lastpage">
+                {% for i in lapa %}
+                <h3 style="margin: 40px 0;">{{i.L3_name}}</h3>
+                {% endfor %}
+                {% for i in lapaCon %}
+                <h5><a href="" class="popular-content">{{i.l3_name}}</a></h5>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="term-social-privacy">
+            <div>
+                <h6>Ⓒ 2024 We Seek Travel All rights reserved</h6>
+            </div>
+            <div class="term-social-privacy" style="top: 0%;">
+                <div><a href="">
+                        <h1><i class="fa-brands fa-instagram"></h1></i>
+                    </a></div>
+                <div><a href="">
+                        <h1><i class="fa-brands fa-facebook"></i></h1>
+                    </a></div>
+                <div><a href="">
+                        <h1><i class="fa-brands fa-youtube"></i></h1>
+                    </a></div>
+            </div>
+            <div>
+                <h6><a href="" style="text-decoration-line: none;color: #fff;">Privacy & Disclosures | Terms |
+                        Sitemap</a></h6>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

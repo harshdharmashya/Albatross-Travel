@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div id="header" style="background-image: url({{x.img.url}}); background-repeat: no-repeat; background-size: 100% 100%;height: 90vh;">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">{{t.t_name}}</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <u l class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  {% for i in c %}
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'explore' %}">{{i.c_name}}</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'explore' %}">{{i.c1_name}}</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'destinationtour' %}">{{i.c2_name}}</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'about' %}">{{i.c3_name}}</a>
+                  </li>
+                  {% endfor %}
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                  </li>
+                  </ul>
+                  </li>
+                  </ul>
+              </div>
+            </div>
+          </nav>
+          <h1 style="text-align: center;margin-top: 5%;">Bloge name : </h1>
+          <h1 style="text-align: center;">{{x.a}}</h1>
+          <h2 style="text-align: center;margin-top: 15%;">About this blog : </h2>
+          <p class="paragraph" style="text-align: center;margin-top: 5%;color: aliceblue;" ><a href="{% url 'indexpage' %}">Home</a> › <a href="{% url 'blog' %}">Blog</a> / <a href="{% url 'explore' %}">Explore</a> › {{x.a}}</p>
+    </div>
+    <p>{{x.des | safe}} Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi magnam accusamus harum sint veniam officia aut facere recusandae dignissimos temporibus expedita error aspernatur incidunt, ipsum, atque ab cupiditate corporis assumenda molestiae, deserunt numquam asperiores cumque autem doloribus! Aut facilis doloremque, rem, a rerum dolore quaerat fugit beatae nulla exercitationem porro eligendi!</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+</html>

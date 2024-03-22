@@ -1,0 +1,193 @@
+@media screen and (min-width:768px) and (max-width :1023px) {
+    .firstcontainer {
+        height: 100vh;
+        font-size: 17px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+
+}
+@media screen and (max-width :768px) {
+
+    /* .bar {
+        height: 85px;
+        background-color: black;
+        z-index: 7;
+        width: 100%;
+        box-shadow: 1px 2px 10px;
+    } */
+    .Albatross-text {
+        color: white;
+        display: block;
+        margin: auto;
+    }
+    .searchbaroffirst {
+        border-radius: 51px;
+        width: 289px;
+        height: 31px;
+        margin-left: 56px;
+        margin-top: 15px;
+        border: none;
+        padding: 10px;
+    }
+
+    .Whoim {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .text {
+        margin: 10px;
+        margin-top: 15px;
+    }
+
+    .text p {
+        font-size: large;
+    }
+
+    .photo {
+        padding: 0px;
+        margin-top: 0px;
+    }
+
+    .photo img {
+        height: 250px;
+        width: 610px;
+        object-fit: cover;
+
+    }
+
+    .outer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .inner {
+        /* height: 420px;
+        width: 300px; */
+        flex-basis: 18%;
+    }
+
+    .inner img {
+        height: 420px;
+        width: 280px;
+        object-fit: cover;
+        display: block;
+        margin: auto;
+    }
+
+    .inner:hover {
+        transform: none;
+    }
+
+    .innertext5 {
+        color: #fff;
+        background-color: #0c8cb8;
+        z-index: 100;
+        position: relative;
+        width: 40%;
+        margin: auto;
+        bottom: 16px;
+        font-size: 1.5em;
+        border-radius: 3px;
+        text-align: center;
+    }
+
+    .fourthsection {
+        height: 20vh;
+    }
+
+    .owlimg {
+        object-fit: cover;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        margin: 10px;
+    }
+
+    .owlimg:hover {
+        transform: scale(1.1);
+        transition: 1s;
+    }
+
+    .colombia {
+        margin-left: 18px;
+        font-size: 0.7rem;
+    }
+
+    .inner-pop {
+        height: 400px;
+        width: 270px;
+        margin: 10px 20px;
+    }
+
+    .inner-pop img {
+        object-fit: cover;
+        height: 330px;
+        width: 270px;
+        align-items: center;
+    }
+
+    .inner-pop img:hover {
+        transform: none;
+    }
+
+    .pop-guide-text {
+        width: 50%;
+        margin: auto;
+        font-size: 1.2em;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .sevnthsection {
+        height: 60vh;
+    }
+    .adventure-text {
+      position: absolute;
+      color: #fff;
+      text-align: center;
+      width: 100%;
+      margin-left: 0px;
+    }
+
+    .adventure-button {
+        width: 25%;
+    }
+
+    .epic-Tour-Experinces {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .travelguide-div {
+        height: 250px;
+        width: 200px;
+        margin: 0px 20px;
+    }
+
+    .travelguide-div img {
+        height: 150px;
+        width: 200px;
+    }
+
+    .pop-guide-text {
+        margin: auto;
+        font-size: 1.1em;
+        text-align: center;
+    }
+    heading {
+        font-size: x-large;
+    }
+
+    .image-container,
+    .text-container {
+        flex: 1 1 auto;
+    }
+    .lastpage {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

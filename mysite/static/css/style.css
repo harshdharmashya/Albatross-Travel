@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.firstcontainer {
+    font-size: 20px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+}
+
+.Albatross-text {
+    color: white;
+    display: block;
+    margin: auto;
+}
+
+.searchbaroffirst {
+    border-radius: 51px;
+    width: 400px;
+    height: 45px;
+    display: block;
+    margin: auto;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.Secoundcontainer {
+    padding: 55px;
+}
+
+.Whoim {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.text {
+    flex-basis: 40%;
+}
+
+.text p {
+    font-size: large;
+}
+
+.photo {
+    flex-basis: 40%;
+}
+
+.photo img {
+    height: 400px;
+    width: 500px;
+    object-fit: cover;
+
+}
+
+.outer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.inner img {
+    height: 420px;
+    width: 270px;
+    object-fit: cover;
+}
+
+.inner {
+    height: 420px;
+    width: 270px;
+}
+
+.inner:hover {
+    transform: scale(1.1);
+    transition: 0.8s ease-out;
+}
+
+.innertext5 {
+    color: #fff;
+    background-color: #0c8cb8;
+    z-index: 100;
+    position: relative;
+    width: 75%;
+    margin: auto;
+    bottom: 16px;
+    font-size: 1.5em;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.titleofpage {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+.fourthsection {
+    /* height: 30vh; */
+    padding: 50px 0;
+}
+
+.owlimg {
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.owlimg:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.colombia {
+    margin-left: 18px;
+}
+
+.inner-pop {
+    height: 400px;
+    width: 300px;
+}
+
+.inner-pop img {
+    object-fit: cover;
+    height: 400px;
+    width: 300px;
+}
+
+.inner-pop img:hover {
+    transform: scale(1.1);
+    transition: 0.8s ease-out;
+}
+
+.epic-Tour-Experinces {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.travelguide-div {
+    height: 350px;
+    width: 350px;
+    margin: 0px 50px;
+}
+
+.travelguide-div img {
+    height: 250px;
+    width: 350px;
+}
+
+.pop-guide-text {
+    width: 80%;
+    margin: auto;
+    bottom: 16px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.outer-pop {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.inner-pop {
+    height: 500px;
+    width: 300px;
+}
+
+.inner-pop img {
+    object-fit: cover;
+    height: 400px;
+    width: 300px;
+}
+
+.inner-pop img:hover {
+    transform: scale(1.1);
+    transition: 0.8s ease-out;
+}
+
+.seventhsection {
+    height: 60vh;
+    text-align: center;
+}
+
+.adventure-text {
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    width: 60%;
+    margin-left: 270px;
+}
+
+.adventure-button {
+    height: 50px;
+    background-color: #0B7FA2;
+    border: none;
+    width: 20%;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.ninthsection {
+    background-color: black;
+}
+
+.lastpage {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.inner-lastpage h3{
+    margin: 40px 0;
+}
+
+.popular-content {
+    color: #fff;
+}
+
+.term-social-privacy {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 35px;
+    position: relative;
+    top: 55px;
+}
+
+.popular-content {
+    color: #fff;
+    text-decoration-line: none;
+}

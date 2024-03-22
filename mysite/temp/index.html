@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  {% load static %}
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="../static/css/responsive.css">
+  <link rel="stylesheet" href="./static/css/owl.carousel.css">
+  <link rel="stylesheet" href="./static/css/owl.theme.green.css">
+  <script src="./static/js/jquery.min.js"></script>
+  <script src="./static/js/owl.carousel.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .firstcontainer {
+      font-size: 20px;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height: 100vh;
+    }
+
+    .Albatross-text {
+      color: white;
+      display: block;
+      margin: auto;
+    }
+
+    .searchbaroffirst {
+      border-radius: 51px;
+      width: 400px;
+      height: 45px;
+      display: block;
+      margin: auto;
+      border: none;
+      padding: 10px;
+      margin-top: 15px;
+    }
+
+    .Secoundcontainer {
+      padding: 55px;
+    }
+
+    .Whoim {
+      display: flex;
+      justify-content: space-between;
+
+    }
+
+    .text {
+      flex-basis: 40%;
+    }
+
+    .text p {
+      font-size: large;
+    }
+
+    .photo {
+      flex-basis: 40%;
+    }
+
+    .photo img {
+      height: 460px;
+      width: 100%;
+      object-fit: cover;
+
+    }
+
+    .outer {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .inner img {
+      height: 420px;
+      width: 270px;
+      object-fit: cover;
+    }
+
+    .inner {
+      height: 420px;
+      width: 270px;
+    }
+
+    .inner:hover {
+      transform: scale(1.1);
+      transition: 0.8s ease-out;
+    }
+
+    .innertext5 {
+      color: #fff;
+      background-color: #0c8cb8;
+      z-index: 100;
+      position: relative;
+      width: 75%;
+      margin: auto;
+      bottom: 16px;
+      font-size: 1.5em;
+      border-radius: 3px;
+      text-align: center;
+    }
+
+    .titleofpage {
+      display: flex;
+      justify-content: center;
+      margin: 40px;
+    }
+
+    .fourthsection {
+      /* height: 30vh; */
+      padding: 50px 0;
+    }
+
+    .owlimg {
+      object-fit: cover;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      margin: 10px;
+    }
+
+    .owlimg:hover {
+      transform: scale(1.1);
+      transition: 1s;
+    }
+
+    .colombia {
+      margin-left: 18px;
+    }
+
+    .inner-pop {
+      height: 500px;
+      width: 300px;
+    }
+
+    .inner-pop img {
+      object-fit: cover;
+      height: 400px;
+      width: 300px;
+    }
+
+    .inner-pop img:hover {
+      transform: scale(1.1);
+      transition: 0.8s ease-out;
+    }
+
+    .epic-Tour-Experinces {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .travelguide-div {
+      height: 350px;
+      width: 350px;
+      margin: 0px 50px;
+    }
+
+    .travelguide-div img {
+      height: 250px;
+      width: 350px;
+    }
+
+    .pop-guide-text {
+      width: 80%;
+      margin: auto;
+      bottom: 16px;
+      font-size: 1.2em;
+      text-align: center;
+    }
+
+    .outer-pop {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .inner-pop {
+      height: 400px;
+      width: 300px;
+    }
+
+    .inner-pop img {
+      object-fit: cover;
+      height: 400px;
+      width: 300px;
+    }
+
+    .inner-pop img:hover {
+      transform: scale(1.1);
+      transition: 0.8s ease-out;
+    }
+
+    .seventhsection {
+      height: 65vh;
+      text-align: center;
+    }
+
+    .adventure-text {
+      position: absolute;
+      color: #fff;
+      text-align: center;
+      width: 60%;
+      margin-left: 270px;
+    }
+
+    .adventure-button {
+      height: auto;
+      background-color: #0B7FA2;
+      border: none;
+      /* width: min-content; */
+      border-radius: 5px;
+      color: #fff;
+      font-weight: bold;
+      padding: 5px;
+    }
+
+    .ninthsection {
+      background-color: black;
+    }
+
+    .lastpage {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .inner-lastpage {
+      margin: 50px;
+    }
+
+    .popular-content {
+      color: #fff;
+    }
+
+    .term-social-privacy {
+      background-color: black;
+      display: flex;
+      justify-content: space-evenly;
+      gap: 35px;
+      /* position: relative; */
+      /* top: 55px; */
+    }
+
+    .popular-content {
+      color: #fff;
+      text-decoration-line: none;
+    }
+
+    @media screen and (max-width :768px) {
+      .epic-Tour-Experinces {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .fourthsection {
+        height: 30vh;
+      }
+
+      .eighthsection h1 {
+        font-size: x-large;
+      }
+
+      .ninthsection {
+        background: black;
+      }
+
+      .owl-carousel .owl-item img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .colombia {
+        width: 100%;
+        font-size: xx-small;
+      }
+
+      .adventure-text {
+        position: absolute;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        margin-left: 0px;
+      }
+      .adventure-button {
+      width: min-content;
+    }
+    .inner{
+      margin: 30px 0;
+    }
+    }
+  </style>
+</head>
+
+<body>
+  {% for a in wimg %}
+  <section class="firstcontainer"
+    style="background-image: url({{a.bg.url}}); background-repeat: no-repeat; background-size: 100% 100%;">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">{{t.t_name}}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <u l class="navbar-nav ms-auto mb-2 mb-lg-0">
+            {% for i in c %}
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'blog' %}">{{i.c_name}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'explore' %}">{{i.c1_name}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'destinationtour' %}">{{i.c2_name}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'about' %}">{{i.c3_name}}</a>
+            </li>
+            {% endfor %}
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url "logout" %}">logout </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url "profile" %}">Profile </a>
+            </li>
+
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'login' %}">login </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'signup' %}">Sign up</a>
+            </li>
+
+            {% endif %}
+            </ul>
+            </li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+    <h1 data-aos="fade-up" class="Albatross-text" style="margin-top: 150px;margin-bottom: 30px;">{{c3.a_name}}
+    </h1>
+    <h5 class="Albatross-text" style="margin-top: 10px;">{{c3.b_name}}</h5>
+    <form role="search" action="{% url 'search' %}">
+      <input type="search" class="searchbaroffirst" placeholder="search Albatross Travel" name="qry">
+      <!-- <button type="submit" class="searchbutton"><i class="fa-solid fa-magnifying-glass"></i></button> -->
+    </form>
+    <h6 style="color: white;display: flex;justify-content: center;margin-top: 20px;font-size: 13px;">{{c3.c_name}}</h6>
+  </section>
+
+
+  <section class="Secoundcontainer">
+    <div class="Whoim">
+      <div class="text">
+        {{d.des | safe}}
+      </div>
+      <div class="photo"><img data-aos="fade-top" src="{{a.image.url}}" alt="">
+      </div>
+    </div>
+  </section>
+  {% endfor %}
+  <section class="thirdsection">
+    <h1 class="titleofpage" data-aos="fade-up">{{h.h1_name}}</h1>
+    <div class="outer">
+      {% for i in desti %}
+      <div class="inner"><img src="{{i.img.url}}" alt="">
+        <h3 class="innertext5">{{i.a}}</h3>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  <section class="fourthsection">
+    <script type="text/javascript">
+      var _smartsupp = _smartsupp || {};
+      _smartsupp.key = '02a11ae681f763f7581e645c490b81a81ea4d5ec';
+      window.smartsupp || (function (d) {
+        var s, c, o = smartsupp = function () { o._.push(arguments) }; o._ = [];
+        s = d.getElementsByTagName('script')[0]; c = d.createElement('script');
+        c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
+        c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
+      })(document);
+    </script>
+    <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+    <div class="owl-carousel owl-theme">
+      {% for i in alldesti %}
+      <div class="item">
+        <h5><img class="owlimg" src="{{i.img.url}}" alt=""><a class="colombia" href="">{{i.a}}</a></h5>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  <section class="fifthsection">
+    <h1 class="titleofpage" data-aos="fade-up">{{h.h3_name}}</h1>
+    <div class="outer">
+      {% for i in popguide %}
+      <div class="inner-pop" style="height: 500px;"><img src="{{i.img.url}}" alt="">
+        <h3 class="pop-guide-text" style="margin-top: 35px;">{{i.a}}</h3>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% for b in wimg %}
+  <section class="seventhsection"
+    style="text-align: center;background-image: url({{b.tep.url}});background-repeat: no-repeat;background-size: 100% 100%;">
+    <h1 class="titleofpage" data-aos="fade-up" style="color: #fff;">{{h.h4_name}}</h1>
+    <h6 class="adventure-text">{{d.des1 | safe}}</h6>
+    <a href="" style="position: relative;top: 200px;"><button class="adventure-button">{{wb.b1_name}}</button></a>
+  </section>
+  {% endfor %}
+
+  <section class="eighthsection">
+    <h1 class="titleofpage" data-aos="fade-up">{{h.h5_name}}</h1>
+    <div class="epic-Tour-Experinces">
+      {% for i in traguide %}
+      <div>
+        <div class="travelguide-div">
+          <img src="{{i.img.url}}" alt=" ">
+          <h3 class="pop-guide-text">{{i.a}}</h3>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% for a in wimg %}
+  <section class="seventhsection"
+    style="margin-top: 50px;text-align: center;background-image: url({{a.tep.url}});background-repeat: no-repeat;background-size: 100% 100%;">
+    <h1 class="titleofpage" data-aos="fade-up" style="color: #fff;">{{h.h6_name}}</h1>
+    <h6 class="adventure-text">{{d.des2 | safe}}</h6>
+    <a href="" style="position: relative;top: 200px;"><button class="adventure-button">{{wb.b2_name}}</button></a>
+  </section>
+  {% endfor %}
+
+  <section class="eighthsection">
+    <h1 class="titleofpage" data-aos="fade-up">{{h.h7_name}}</h1>
+    <h5 style="width: 50%;display: block;margin: auto;text-align: center;">{{d.des3 | safe}}</h5>
+    <div class="epic-Tour-Experinces">
+      {% for i in tourex %}
+      <div class="col-md-4">
+        <div style="height: 350px;width: 350px;margin: 0px 50px;"><img style="height: 250px;width: 350px;"
+            src="{{i.img.url}}" alt=" ">
+          <h3 class="pop-guide-text">{{i.a}}</h3>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  <section class="ninthsection" style="background-color: black;margin-top: 50px;color: #fff;">
+    <div class="lastpage" style="display: flex;justify-content: space-evenly;flex-wrap: wrap;">
+      <div class="inner-lastpage">
+        {% for i in lapa %}
+        <h3 style="margin: 50px;">{{i.L1_name}}</h3>
+        {% endfor %}
+        {% for i in lapaCon %}
+        <h5><a href="" class="popular-content">{{i.l1_name}}</a></h5>
+        {% endfor %}
+      </div>
+      <div class="inner-lastpage">
+        {% for i in lapa %}
+        <h3 style="margin: 50px;">{{i.L2_name}}</h3>
+        {% endfor %}
+        {% for i in lapaCon %}
+        <h5><a href="" class="popular-content">{{i.l2_name}}</a></h5>
+        {% endfor %}
+      </div>
+      <div class="inner-lastpage">
+        {% for i in lapa %}
+        <h3 style="margin: 50px;">{{i.L3_name}}</h3>
+        {% endfor %}
+        {% for i in lapaCon %}
+        <h5><a href="" class="popular-content">{{i.l3_name}}</a></h5>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="term-social-privacy">
+      <div>
+        <h6>Ⓒ 2024 We Seek Travel All rights reserved</h6>
+      </div>
+      <div class="term-social-privacy" style="top: 0%;">
+        <div><a href="">
+            <h1><i class="fa-brands fa-instagram"></h1></i>
+          </a></div>
+        <div><a href="">
+            <h1><i class="fa-brands fa-facebook"></i></h1>
+          </a></div>
+        <div><a href="">
+            <h1><i class="fa-brands fa-youtube"></i></h1>
+          </a></div>
+      </div>
+      <div>
+        <h6><a href="" style="text-decoration-line: none;color: #fff;">Privacy & Disclosures | Terms | Sitemap</a></h6>
+      </div>
+    </div>
+  </section>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      smartSpeed: 1500,
+      animateIn: 'linear',
+      animateOut: 'linear',
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 8
+        },
+        1000: {
+          items: 8
+        }
+      }
+    })
+  </script>
+  <script src="./static/JS/jquery.min.js"></script>
+  <script src="./static/JS/owl.carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 320, // offset (in px) from the original trigger point
+      delay: 0, // values from 0 to 3000, with step 50ms
+      duration: 2000,
+    });
+  </script>
+</body>
+
+</html
