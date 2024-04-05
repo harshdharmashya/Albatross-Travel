@@ -66,12 +66,44 @@
         .about-albatross {
             padding: 30px 100px;
         }
+
+        .ninthsection {
+            background-color: black;
+        }
+
+        .lastpage {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .inner-lastpage {
+            margin: 50px;
+        }
+
+        .popular-content {
+            color: #fff;
+        }
+
+        .term-social-privacy {
+            background-color: black;
+            display: flex;
+            justify-content: space-evenly;
+            gap: 35px;
+            /* position: relative; */
+            /* top: 55px; */
+        }
+
+        .popular-content {
+            color: #fff;
+            text-decoration-line: none;
+        }
+
         @media screen and (max-width :768px) {
             .lastpage {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-}
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -141,11 +173,11 @@
         </div>
         {% endfor %}
     </section>
-    <section class="ninthsection" style="background-color: black;height: 90vh;color: #fff;padding: 40px;">
-        <div class="lastpage" style="display: flex;justify-content: space-between;flex-wrap: wrap;">
+    <section class="ninthsection" style="background-color: black;margin-top: 50px;color: #fff;">
+        <div class="lastpage" style="display: flex;justify-content: space-evenly;flex-wrap: wrap;">
             <div class="inner-lastpage">
                 {% for i in lapa %}
-                <h3 style="margin: 40px 0;">{{i.L1_name}}</h3>
+                <h3 style="margin: 50px;">{{i.L1_name}}</h3>
                 {% endfor %}
                 {% for i in lapaCon %}
                 <h5><a href="" class="popular-content">{{i.l1_name}}</a></h5>
@@ -153,7 +185,7 @@
             </div>
             <div class="inner-lastpage">
                 {% for i in lapa %}
-                <h3 style="margin: 40px 0;">{{i.L2_name}}</h3>
+                <h3 style="margin: 50px;">{{i.L2_name}}</h3>
                 {% endfor %}
                 {% for i in lapaCon %}
                 <h5><a href="" class="popular-content">{{i.l2_name}}</a></h5>
@@ -161,7 +193,7 @@
             </div>
             <div class="inner-lastpage">
                 {% for i in lapa %}
-                <h3 style="margin: 40px 0;">{{i.L3_name}}</h3>
+                <h3 style="margin: 50px;">{{i.L3_name}}</h3>
                 {% endfor %}
                 {% for i in lapaCon %}
                 <h5><a href="" class="popular-content">{{i.l3_name}}</a></h5>
