@@ -42,66 +42,67 @@
       color: #fff;
       text-decoration-line: none;
     }
+
     .about-harsh-and-albatross {
-            background-color: rgb(233, 230, 230);
-            padding: 44px 0;
-        }
+      background-color: rgb(233, 230, 230);
+      padding: 44px 0;
+    }
 
-        .responsive-text {
-            text-align: center;
-        }
+    .responsive-text {
+      text-align: center;
+    }
 
-        .heading {
-            font-size: xx-large;
-            font-weight: bold;
-        }
+    .heading {
+      font-size: xx-large;
+      font-weight: bold;
+    }
 
-        .paragraph {
-            font-size: small;
-            margin-top: 10px;
-        }
+    .paragraph {
+      font-size: small;
+      margin-top: 10px;
+    }
   </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">{{t.t_name}}</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <u l class="navbar-nav ms-auto mb-2 mb-lg-0">
-            {% for i in c %}
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'explore' %}">{{i.c_name}}</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'explore' %}">{{i.c1_name}}</a>
-            </li>
-            <!-- <li class="nav-item">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">{{t.t_name}}</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <u l class="navbar-nav ms-auto mb-2 mb-lg-0">
+          {% for i in c %}
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'explore' %}">{{i.c_name}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'explore' %}">{{i.c1_name}}</a>
+          </li>
+          <!-- <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="{% url 'destinationtour' %}">{{i.c2_name}}</a>
                 </li> -->
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'about' %}">{{i.c3_name}}</a>
-            </li>
-            {% endfor %}
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-magnifying-glass"></i>
-              </a>
-            </li>
-            </ul>
-            </li>
-            </ul>
-        </div>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'about' %}">{{i.c3_name}}</a>
+          </li>
+          {% endfor %}
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+          </li>
+          </ul>
+          </li>
+          </ul>
       </div>
-    </nav>
-    <section class="about-harsh-and-albatross">
-      <div class="responsive-text">
-          <h1 class="heading">ABOUT OLLY GASPAR & WE SEEK TRAVEL</h1>
-          <p class="paragraph"><a href="{% url 'indexpage' %}">Home</a> › About Olly Gaspar & We Seek Travel</p>
-      </div>
+    </div>
+  </nav>
+  <section class="about-harsh-and-albatross">
+    <div class="responsive-text">
+      <h1 class="heading">ABOUT OLLY GASPAR & WE SEEK TRAVEL</h1>
+      <p class="paragraph"><a href="{% url 'indexpage' %}">Home</a> › About Olly Gaspar & We Seek Travel</p>
+    </div>
   </section>
   <section class="eighthsection">
     <h1 class="titleofpage" data-aos="fade-down">{{h.h5_name}}</h1>
@@ -112,7 +113,7 @@
         <div style="margin: 20px 20px;background-color: rgb(241, 236, 236);border-radius: 5px;"><img
             style="height: 260px;width: 354px;border-radius: 3px;display: block;margin: auto;" src="{{i.img.url}}"
             alt=" ">
-          <h3 class="pop-guide-text">{{i.a}}</h3>
+          <h3 class="pop-guide-text" style="font-size: x-large;display: block;margin: auto;width: 80%;">{{i.a}}</h3>
           <h6 style="text-align: center;font-size: small;width: 70%;display: block;margin: auto;">{{i.des | safe}}</h6>
           <a href="readmore/{{i.id}}" style="position: relative;top: 20px;"><button class="adventure-button"
               style="height: 40px;background-color:#0B7FA2;border: none;width: 40%;border-radius: 5px;color: #fff;font-weight: bold;display: block;margin: auto;">Read
@@ -120,26 +121,6 @@
         </div>
       </div>
       {% endfor %}
-      <div class="pagination" style="display: block;margin: auto;width: 18%;margin-top: 50px;">
-        <span class="step-links">
-          {% if ob.has_previous %}
-          <a href="?page=1" style="color: black;padding: 8px;text-decoration: none;display: block;margin: auto;">&laquo;
-            first</a>
-          <a href="?page={{ ob.previous_page_number }}"
-            style="color: black;padding: 8px;text-decoration: none;">previous</a>
-          {% endif %}
-
-          <span class="current" style="color: black;padding: 8px;text-decoration: none;">
-            Page {{ ob.number }} of {{ ob.paginator.num_pages }}.
-          </span>
-
-          {% if ob.has_next %}
-          <a href="?page={{ ob.next_page_number }}" style="color: black;padding: 8px;text-decoration: none;">next</a>
-          <a href="?page={{ ob.paginator.num_pages }}" style="color: black;padding: 8px;text-decoration: none;">last
-            &raquo;</a>
-          {% endif %}
-        </span>
-      </div>
     </div>
 
   </section>
@@ -171,13 +152,23 @@
       </div>
     </div>
     <div class="term-social-privacy">
-      <div><h6>Ⓒ 2024 We Seek Travel All rights reserved</h6></div>
-      <div class="term-social-privacy" style="top: 0%;">
-          <div><a href=""><h1><i class="fa-brands fa-instagram"></h1></i></a></div>
-          <div><a href=""><h1><i class="fa-brands fa-facebook"></i></h1></a></div>
-          <div><a href=""><h1><i class="fa-brands fa-youtube"></i></h1></a></div>
+      <div>
+        <h6>Ⓒ 2024 We Seek Travel All rights reserved</h6>
       </div>
-      <div><h6><a href="" style="text-decoration-line: none;color: #fff;">Privacy & Disclosures | Terms | Sitemap</a></h6></div>
+      <div class="term-social-privacy" style="top: 0%;">
+        <div><a href="">
+            <h1><i class="fa-brands fa-instagram"></h1></i>
+          </a></div>
+        <div><a href="">
+            <h1><i class="fa-brands fa-facebook"></i></h1>
+          </a></div>
+        <div><a href="">
+            <h1><i class="fa-brands fa-youtube"></i></h1>
+          </a></div>
+      </div>
+      <div>
+        <h6><a href="" style="text-decoration-line: none;color: #fff;">Privacy & Disclosures | Terms | Sitemap</a></h6>
+      </div>
     </div>
   </section>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
