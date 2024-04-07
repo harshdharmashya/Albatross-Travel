@@ -113,8 +113,10 @@
     }
 
     .colombia {
-        margin-left: 18px;
+        display: block;
+        width: 100%;
         font-size: 0.7rem;
+        align-items: center;
     }
 
     .inner-pop {
@@ -189,5 +191,11 @@
     .lastpage {
         display: grid;
         grid-template-columns: 1fr;
+    }
+    .owl-carousel .owl-item img {
+        display: block;
+        /* width: 100%; */
+        height: auto;
+        margin: auto;
     }
 }
