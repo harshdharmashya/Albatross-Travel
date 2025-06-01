@@ -51,9 +51,11 @@ This project demonstrates a complete travel agency frontend that’s visually ri
 ![Screenshot 2025-06-01 180151](https://github.com/user-attachments/assets/4928552f-e03b-44d1-805a-cb801668426a)
 ![Screenshot 2025-06-01 180236](https://github.com/user-attachments/assets/8d41afe7-5408-4913-842e-40524233ace8)
 ![Screenshot 2025-06-01 180208](https://github.com/user-attachments/assets/414bc3f0-85d1-48a3-a914-749f934e2dd6)
+![Screenshot 2025-06-01 180220](https://github.com/user-attachments/assets/3b578ca2-f95d-4f74-8484-e79868eafeff)
 
-##🙌 Contributing
+
+🙌 Contributing
 Pull requests are welcome! Feel free to suggest features or improvements via issues.
 
-##Crafted with ✈️ by Harsh Dharmashya
+Crafted with ✈️ by Harsh Dharmashya
 
